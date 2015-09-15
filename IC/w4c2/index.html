@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>[Hello]</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <title>[Hello]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-<!--  Load site-specific customizations after bootstrap. -->
-<link rel="stylesheet" href="style.css">
+  <!--  Load site-specific customizations after bootstrap. -->
+  <link rel="stylesheet" href="style.css">
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-<![endif]-->
+  <![endif]-->
 
 
 </head>
@@ -21,8 +21,8 @@
 
 
 
-<div class="header-image">
-</div>
+  <div class="header-image">
+  </div>
 
   <!-- Responsive navbar -->
   <div class="navbar navbar-inverse" role="navigation">
@@ -46,62 +46,63 @@
   </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3" id="information">
-      <div class="well" id="sidebar" >
-        <h2>Sidebar</h2>
-        <li><a href="#">Boostrap</a></li>
-        <li><a href="#">Is</a></li>
-        <li><a href="#">Cool!</a></li>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="information">
+        <div class="well" id="sidebar" >
+          <h2>Sidebar</h2>
+          <li><a href="#">Boostrap</a></li>
+          <li><a href="#">Is</a></li>
+          <li><a href="#">Cool!</a></li>
+        </div>
+      </div>
+
+      <div class="col-md-9 hidden-xs hidden-sm">
+        <div class="well" id="main" onclick="changeMainOnClick()">
+          <h2>Welcome to mock up page.</h2>
+          <p>First paragraph.</p>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-9 hidden-xs hidden-sm">
-      <div class="well" id="main" onclick="changeMainOnClick()">
-        <h2>Welcome to mock up page.</h2>
-        <p>First paragraph.</p>
-      </div>
-    </div>
-    </div>
-
-<div clas="row">
-  <div class="col-md-12" id="form">
-    <div class="well">
-        <form>
-          <div class="form-group" action="result.html" onsubmit="return form()" method="get">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-  </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12" id="footer">
-      <div class="well" onmouseover="changeFooterOnOver()">
-        <p>This is the footer!</p>
+    <div clas="row">
+      <div class="col-md-12">
+        <div class="well">
+          <form  action="result.html" method="get" id="emailForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+            </div>
+            <input type="submit" class="btn btn-default" value="Submit">
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<script src="script.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="footer">
+        <div class="well" onmouseover="changeFooterOnOver()">
+          <p>This is the footer!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script>createParagraph();</script>
+
+  <script src="script.js"></script>
+
+  <script>createParagraph();</script>
 
 
   <!-- Load Bootstrap JavaScript components -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -37,3 +37,33 @@ function changeSidebarOnLeave(){
 
   sidebar.appendChild(listItem);
 }
+
+function displayForm(){
+  var query = location.search;
+  query = query.slice(1);
+  var array = query.split("&");
+  var cleanArray = [];
+
+  for(i = 0; i < array.length; i++) {
+    console.log(array[i]);
+    var assignment = array[i].indexOf("=") + 1;
+    cleanArray.push(array[i].slice(assignment));
+  }
+
+  console.log(cleanArray);
+
+var table = document.getElementById("table");
+
+var tableHeader = document.createElement("thead");
+var tableHeaderRow = document.createElement("tr");
+
+
+for(i = 0; i < array.length; i++) {
+  var tableHeaderLabels = document.createElement("th");
+  tableHeaderLabels.appendChild(document.createTextNode(array[i].slice(0, array[i].indexOf("="))));
+  tableHeaderRow.appendChild(tableHeaderLabels);
+  tableHeader.appendChild(tableHeaderRow);
+  table.appendChild(tableHeader);
+}
+
+}
