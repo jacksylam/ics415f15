@@ -45,18 +45,17 @@ function displayForm(){
   var cleanArray = [];
 
   for(i = 0; i < array.length; i++) {
-    console.log(array[i]);
     var assignment = array[i].indexOf("=") + 1;
     cleanArray.push(array[i].slice(assignment));
   }
 
-  console.log(cleanArray);
 
+//Initialize table
 var table = document.getElementById("table");
 
+//Initialize table headings
 var tableHeader = document.createElement("thead");
 var tableHeaderRow = document.createElement("tr");
-
 
 for(i = 0; i < array.length; i++) {
   var tableHeaderLabels = document.createElement("th");
@@ -64,6 +63,18 @@ for(i = 0; i < array.length; i++) {
   tableHeaderRow.appendChild(tableHeaderLabels);
   tableHeader.appendChild(tableHeaderRow);
   table.appendChild(tableHeader);
+}
+
+//Intiialize table body
+var tableBody = document.createElement("tbody");
+var tableRow = document.createElement("tr");
+
+for(i = 0; i < cleanArray.length; i++){
+  var tableElement = document.createElement("td");
+  tableElement.appendChild(document.createTextNode(cleanArray[i]));
+  tableRow.appendChild(tableElement);
+  tableBody.appendChild(tableRow);
+  table.appendChild(tableBody);
 }
 
 }
