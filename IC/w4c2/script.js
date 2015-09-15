@@ -37,7 +37,3 @@ function changeSidebarOnLeave(){
 
   sidebar.appendChild(listItem);
 }
-
-function form(){
-
-}
