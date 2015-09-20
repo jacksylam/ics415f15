@@ -1,6 +1,6 @@
 /**
- * Created by Jack on 9/13/2015.
- */
+* Created by Jack on 9/13/2015.
+*/
 
 
 function createParagraph(){
@@ -9,14 +9,15 @@ function createParagraph(){
   paragraph.appendChild(node);
 
 
-var element = document.getElementById("main");
+  var element = document.getElementById("main");
   element.appendChild(paragraph);
 }
 
 function changeMainOnClick(){
- var p = document.getElementById("main");
+  var p = document.getElementById("main");
   p.style.color = "blue";
 }
+var para = document.getElementById("main").onclick = changeMainOnClick;
 
 function changeFooterOnOver(){
   var footer = document.getElementsByTagName("p");
@@ -50,31 +51,31 @@ function displayForm(){
   }
 
 
-//Initialize table
-var table = document.getElementById("table");
+  //Initialize table
+  var table = document.getElementById("table");
 
-//Initialize table headings
-var tableHeader = document.createElement("thead");
-var tableHeaderRow = document.createElement("tr");
+  //Initialize table headings
+  var tableHeader = document.createElement("thead");
+  var tableHeaderRow = document.createElement("tr");
 
-for(i = 0; i < array.length; i++) {
-  var tableHeaderLabels = document.createElement("th");
-  tableHeaderLabels.appendChild(document.createTextNode(array[i].slice(0, array[i].indexOf("="))));
-  tableHeaderRow.appendChild(tableHeaderLabels);
-  tableHeader.appendChild(tableHeaderRow);
-  table.appendChild(tableHeader);
-}
+  for(i = 0; i < array.length; i++) {
+    var tableHeaderLabels = document.createElement("th");
+    tableHeaderLabels.appendChild(document.createTextNode(array[i].slice(0, array[i].indexOf("="))));
+    tableHeaderRow.appendChild(tableHeaderLabels);
+    tableHeader.appendChild(tableHeaderRow);
+    table.appendChild(tableHeader);
+  }
 
-//Intiialize table body
-var tableBody = document.createElement("tbody");
-var tableRow = document.createElement("tr");
+  //Intiialize table body
+  var tableBody = document.createElement("tbody");
+  var tableRow = document.createElement("tr");
 
-for(i = 0; i < cleanArray.length; i++){
-  var tableElement = document.createElement("td");
-  tableElement.appendChild(document.createTextNode(cleanArray[i]));
-  tableRow.appendChild(tableElement);
-  tableBody.appendChild(tableRow);
-  table.appendChild(tableBody);
-}
+  for(i = 0; i < cleanArray.length; i++){
+    var tableElement = document.createElement("td");
+    tableElement.appendChild(document.createTextNode(cleanArray[i]));
+    tableRow.appendChild(tableElement);
+    tableBody.appendChild(tableRow);
+    table.appendChild(tableBody);
+  }
 
 }
