@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[Hello]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+  <!--  Load site-specific customizations after bootstrap. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+
+</head>
+<body>
+
+
+
+  <div class="header-image">
+  </div>
+
+  <!-- Responsive navbar -->
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <!--  Display three horizontal lines when navbar collapsed. -->
+          <span class="icon-bar"></span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="result.html">Result Page</a></li>
+          <li><a href="#">Three</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="information">
+        <div class="well" id="sidebar" >
+          <h2>Sidebar</h2>
+          <li><a href="#">Boostrap</a></li>
+          <li><a href="#">Is</a></li>
+          <li><a href="#">Cool!</a></li>
+        </div>
+      </div>
+
+      <div class="col-md-9 hidden-xs hidden-sm">
+        <div class="well" id="main" >
+          <h2>Welcome to mock up page.</h2>
+          <p id="modify">First paragraph.</p>
+        </div>
+      </div>
+    </div>
+
+    <div clas="row">
+      <div class="col-md-12">
+        <div class="well" id="wellForm">
+          <form  method="GET" id="emailForm">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <input type="submit" class="btn btn-default" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="footer">
+        <div class="well">
+          <p>This is the footer!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
