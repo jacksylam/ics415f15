@@ -24,18 +24,58 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-$("#emailForm").submit(function(e){
-  e.preventDefault();
-  var data = $("#email").val();
-  console.log(data);
-  var datastr='email='+data;
-  $.ajax({
-    type: "GET",
-    url: $("#main"),
-    data: datastr,
-    success: function(data){
-      $("#wellForm").replaceWith(data);
-    }
+  $("#emailForm").submit(function(e){
+    e.preventDefault();
+    var data = $("#email").val();
+    var datastr='email='+data;
+    $.ajax({
+      method: "get",
+      url: "index.html",
+      success: function(data){
+        $("#emailForm").replaceWith(datastr);
+      }
+    });
   });
 });
-});
+
+
+function displayForm(){
+  var query = location.search;
+  query = query.slice(1);
+  var array = query.split("&");
+  var cleanArray = [];
+
+  for(i = 0; i < array.length; i++) {
+    var assignment = array[i].indexOf("=") + 1;
+    cleanArray.push(array[i].slice(assignment));
+  }
+
+
+  //Initialize table
+  var table = document.getElementById("table");
+
+  //Initialize table headings
+  var tableHeader = document.createElement("thead");
+  var tableHeaderRow = document.createElement("tr");
+
+  for(i = 0; i < array.length; i++) {
+    var tableHeaderLabels = document.createElement("th");
+    tableHeaderLabels.appendChild(document.createTextNode(array[i].slice(0, array[i].indexOf("="))));
+    tableHeaderRow.appendChild(tableHeaderLabels);
+    tableHeader.appendChild(tableHeaderRow);
+    table.appendChild(tableHeader);
+  }
+
+  //Intiialize table body
+  var tableBody = document.createElement("tbody");
+  var tableRow = document.createElement("tr");
+
+  for(i = 0; i < cleanArray.length; i++){
+    var tableElement = document.createElement("td");
+    tableElement.appendChild(document.createTextNode(cleanArray[i]));
+    tableRow.appendChild(tableElement);
+    tableBody.appendChild(tableRow);
+    table.appendChild(tableBody);
+  }
+
+}
